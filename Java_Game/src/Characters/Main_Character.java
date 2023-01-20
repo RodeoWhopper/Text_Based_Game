@@ -25,7 +25,7 @@ public class Main_Character {
             Which races are available?
     -ORC
     -HIGH ELVEN
-    -BLACK ELVEN
+    -DARK ELVEN
     -MOUNTAIN DWARF
     -CAVE DWARF
     -HUMAN
@@ -106,54 +106,6 @@ public class Main_Character {
     int base_insight;
 
 
-    public Main_Character(String name,int age, String race,String class_character){
-        this.race = race;
-        if (this.race == "ORC") {
-            this.base_strength = 7;
-            this.base_dexterity = 3;
-            this.base_endurance = 6;
-            this.base_wisdom = 1;
-            this.base_intelligence = 1;
-            this.base_charisma = 1;
-            this.base_insight = 0;
-        }
-        if (this.race == "ELVEN") {
-            this.base_strength = 2;
-            this.base_dexterity = 7;
-            this.base_endurance = 2;
-            this.base_wisdom = 2;
-            this.base_intelligence = 3;
-            this.base_charisma = 4;
-            this.base_insight = 0;
-        }
-        if (this.race == "DWARF") {
-            this.base_strength = 5;
-            this.base_dexterity = 2;
-            this.base_endurance = 7;
-            this.base_wisdom = 0;
-            this.base_intelligence = 1;
-            this.base_charisma = 1;
-            this.base_insight = 0;
-        }
-        if (this.race == "HUMAN") {
-            this.base_strength = 4;
-            this.base_dexterity = 4;
-            this.base_endurance = 3;
-            this.base_wisdom = 3;
-            this.base_intelligence = 3;
-            this.base_charisma = 3;
-            this.base_insight = 0;
-        }
-        if (this.race == "MENTAT") {
-            this.base_strength = -3;
-            this.base_dexterity = -2;
-            this.base_endurance = 1;
-            this.base_wisdom = 6;
-            this.base_intelligence = 7;
-            this.base_charisma = 0;
-            this.base_insight = 10;
-        }
-    }
 
 
     public String getRace() {
@@ -161,7 +113,6 @@ public class Main_Character {
     }
 
     public void setRace(String race) {
-        this.race = race;
     }
 
 
