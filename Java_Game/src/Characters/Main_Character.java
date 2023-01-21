@@ -55,7 +55,7 @@ public class Main_Character {
     -DRUID
     -MAGE
     -WHITE MAGE
-        -- BLACK ELVEN --
+        -- DARK ELVEN --
     -WARRIOR
     -WARLOCK
     -THIEF

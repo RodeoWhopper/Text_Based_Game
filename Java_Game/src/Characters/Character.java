@@ -156,7 +156,7 @@ public class Character {
     }
     protected void classification(String character_class, Character CHARACTER) {
         if(CHARACTER.getRace() == "ORC" && character_class == "BERSERKER") {
-            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.8));
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()*2);
             CHARACTER.setStat_dexterity(CHARACTER.getStat_dexterity()+3);
             CHARACTER.setStat_endurance((int)(CHARACTER.getBase_endurance()*1.8));
             CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+3);
@@ -165,11 +165,227 @@ public class Character {
         }
         else if(CHARACTER.getRace() == "ORC" && character_class == "WARRIOR") {
             CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.5));
-            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2));
+            CHARACTER.setStat_dexterity((CHARACTER.getBase_dexterity()*6));
             CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
             CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+3);
             CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+3);
             CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+2);
+        }
+        else if(CHARACTER.getRace() == "HIGH ELVEN" && character_class == "WARRIOR") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.8));
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*1.6));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+5);
+        }
+        else if(CHARACTER.getRace() == "HIGH ELVEN" && character_class == "WARLOCK") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.8));
+            CHARACTER.setStat_dexterity((CHARACTER.getBase_dexterity()+3));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+4);
+            CHARACTER.setStat_intelligence((int)(CHARACTER.getBase_intelligence()*1.5));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+4);
+        }
+        else if(CHARACTER.getRace() == "HIGH ELVEN" && character_class == "ARCHER") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+2);
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2.25));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+5);
+        }
+        else if(CHARACTER.getRace() == "HIGH ELVEN" && character_class == "DRUID") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+2);
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*1.8));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+3);
+            CHARACTER.setStat_intelligence((int)(CHARACTER.getBase_intelligence()*1.8));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+4);
+        }
+        else if(CHARACTER.getRace() == "HIGH ELVEN" && character_class == "MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom((int)(CHARACTER.getBase_wisdom()*2.3));
+            CHARACTER.setStat_intelligence((CHARACTER.getBase_intelligence()*2));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+6);
+        }
+        else if(CHARACTER.getRace() == "HIGH ELVEN" && character_class == "WHITE MAGE") {
+            CHARACTER.setStat_strength((CHARACTER.getBase_strength()+1));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom((int)(CHARACTER.getBase_wisdom()*2.5));
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*5);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+2);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "WARRIOR") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.8));
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*1.8));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+3);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "WARLOCK") {
+            CHARACTER.setStat_strength((int) (CHARACTER.getBase_strength() * 1.8));
+            CHARACTER.setStat_dexterity((CHARACTER.getBase_dexterity() + 3));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance() + 3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom() + 4);
+            CHARACTER.setStat_intelligence((int) (CHARACTER.getBase_intelligence() * 1.8));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma() + 2);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "THIEF") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+3);
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2.25));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+2);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+5);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "ARCHER") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+2);
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2.4));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+2);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+5);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "DRUID") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+2);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()*2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+3);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength() + 1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity() + 1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance() + 1);
+            CHARACTER.setStat_wisdom((int) (CHARACTER.getBase_wisdom() * 2.3));
+            CHARACTER.setStat_intelligence((CHARACTER.getBase_intelligence() * 2));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma() + 1);
+        }
+        else if(CHARACTER.getRace() == "DARK ELVEN" && character_class == "BLACK MAGE") {
+            CHARACTER.setStat_strength((CHARACTER.getBase_strength()+1));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom((int)(CHARACTER.getBase_wisdom()*2.7));
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+2);
+        }
+        else if(CHARACTER.getRace() == "MOUNTAIN DWARF" && character_class == "BERSERKER") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.5));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()*2);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "MOUNTAIN DWARF" && character_class == "WARRIOR") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.5));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+4);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()*2);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "MOUNTAIN DWARF" && character_class == "MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()*2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+5);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "CAVE DWARF" && character_class == "WARRIOR") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.8));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+3);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "CAVE DWARF" && character_class == "WARLOCK") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*1.5));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+4);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "CAVE DWARF" && character_class == "THIEF") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+3);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()*2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "CAVE DWARF" && character_class == "THIEF") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+3);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()*2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "CAVE DWARF" && character_class == "BLACK MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+6);
+            CHARACTER.setStat_intelligence((int)(CHARACTER.getBase_intelligence()*2.3));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "BERSERKER") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*2.5));
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+3);
+            CHARACTER.setStat_endurance((int)(CHARACTER.getBase_endurance()*2.5));
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "WARRIOR") {
+            CHARACTER.setStat_strength((int)(CHARACTER.getBase_strength()*2.5));
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2.5));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+3);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "WARLOCK") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()*2);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()*2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "THIEF") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2.5));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma((int)(CHARACTER.getBase_charisma()*2.5));
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "ARCHER") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity((int)(CHARACTER.getBase_dexterity()*2.5));
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma((int)(CHARACTER.getBase_charisma()*2.5));
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "DRUID") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()*2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()*2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
         }
     }
 
