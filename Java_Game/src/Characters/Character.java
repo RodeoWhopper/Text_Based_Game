@@ -387,6 +387,39 @@ public class Character {
             CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*2);
             CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
         }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()*2);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()*2);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()*2);
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "WHITE MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()*2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom((int)(CHARACTER.getBase_wisdom()*2.5));
+            CHARACTER.setStat_intelligence((int)(CHARACTER.getBase_intelligence()*2.5));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "HUMAN" && character_class == "BLACK MAGE") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()*2);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom((int)(CHARACTER.getBase_wisdom()*2.5));
+            CHARACTER.setStat_intelligence((int)(CHARACTER.getBase_intelligence()*2.5));
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+        }
+        else if(CHARACTER.getRace() == "MENTAT" && character_class == "SEEKER") {
+            CHARACTER.setStat_strength(CHARACTER.getBase_strength()+1);
+            CHARACTER.setStat_dexterity(CHARACTER.getBase_dexterity()+1);
+            CHARACTER.setStat_endurance(CHARACTER.getBase_endurance()+1);
+            CHARACTER.setStat_wisdom(CHARACTER.getBase_wisdom()+1);
+            CHARACTER.setStat_intelligence(CHARACTER.getBase_intelligence()+1);
+            CHARACTER.setStat_charisma(CHARACTER.getBase_charisma()+1);
+            CHARACTER.setStat_insight(CHARACTER.getBase_insight()*3);
+        }
     }
 
     public String getRace() {
