@@ -1,7 +1,7 @@
 package Items;
 
 public class Item {
-    private static String type;
+    private final String type;
     /*
     Usable
     Craft Material
@@ -9,9 +9,13 @@ public class Item {
     Armor
     Wearable
     */
-    private static String name;
-    private static int max_stack;
-    private int level;
+    private final String itemName;
+    private final boolean stackingCapability;
+    private final Integer maxStack;
+    private final Integer level;
+    private final Integer itemNumber;
+    private int counter = 1;
+
     public void itemPackage(){
         Usable.usableItemPackage();
         CraftMaterial.craftMaterialItemPackage();
@@ -19,256 +23,78 @@ public class Item {
         Armor.armorItemPackage();
         Wearable.wearableItemPackage();
     }
-
-
+    public Item(String type, String itemName, boolean stackingCapability, Integer maxStack, Integer level){
+        this.type = type;
+        this.itemName = itemName;
+        this.stackingCapability = stackingCapability;
+        this.maxStack = maxStack;
+        this.level = level;
+        this.itemNumber = counter;
+        counter++;
+    }
+    public String getType(){
+        return this.type;
+    }
+    public String getItemName(){
+        return this.itemName;
+    }
+    public boolean isItStackable(){
+        return this.stackingCapability;
+    }
+    public Integer getMaxStack(){
+        return this.maxStack;
+    }
+    public Integer getLevel(){
+        return this.level;
+    }
+    public Integer getItemNumber(){
+        return this.itemNumber;
+    }
     private static class Usable extends Item{
-
-        private static final String type = "Usable";
-        private final String name;
-        private static final boolean stacking_capability = true;
-        private final int max_stack;
-        private static final Integer level = null;
-        private int item_number = 0;
-
-        public Usable(String name, int max_stack){
-            super();
-            this.name = name;
-            this.max_stack = max_stack;
-            setItem_number(getItem_number() + 1);
+        public Usable(String name, int maxStack){
+            super("Usable", name, true, maxStack, null);
         }
 
         public static void usableItemPackage(){
             //TODO
-            Usable potion = new Usable( "mustafa",64);
-        }
-
-        public static String getType() {
-            return type;
-        }
-
-        public static boolean isStacking_capability() {
-            return stacking_capability;
-        }
-
-        public static Integer getLevel() {
-            return level;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getMax_stack() {
-            return max_stack;
-        }
-
-        public int getItem_number() {
-            return item_number;
-        }
-
-        public void setItem_number(int item_number) {
-            this.item_number = item_number;
         }
     }
 
-    private static class CraftMaterial extends Item{
-        private static final String type = "Craft Material";
-        private final String name;
-        private static final boolean stacking_capability = true;
-        private final int max_stack;
-        private static final Integer level = null;
-        private int item_number = 0;
+    private class CraftMaterial extends Item{
 
-        public CraftMaterial(String name, int max_stack){
-            super();
-            this.name = name;
-            this.max_stack = max_stack;
-            setItem_number(getItem_number() + 1);
+        public CraftMaterial(String name, int maxStack){
+            super("Craft Material", name, true, maxStack, null);
         }
 
         public static void craftMaterialItemPackage(){
             //TODO
         }
-
-        public static String getType() {
-            return type;
-        }
-
-        public static boolean isStacking_capability() {
-            return stacking_capability;
-        }
-
-        public static Integer getLevel() {
-            return level;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getMax_stack() {
-            return max_stack;
-        }
-
-        public int getItem_number() {
-            return item_number;
-        }
-
-        public void setItem_number(int item_number) {
-            this.item_number = item_number;
-        }
     }
 
     private static class Weapon extends Item{
-        private static final String type = "Weapon";
-        private final String name;
-        private static final boolean stacking_capability = false;
-        private static final int max_stack = 1;
-        private int level;
-        private int item_number = 0;
-
         public Weapon(String name,int level){
-            super();
-            this.name = name;
-            this.setLevel(level);
-            setItem_number(getItem_number() + 1);
+            super("Weapon", name, false,1, level);
         }
-
         public static void weaponItemPackage(){
             //TODO
-        }
-
-        public static String getType() {
-            return type;
-        }
-
-        public static boolean isStacking_capability() {
-            return stacking_capability;
-        }
-
-        public static int getMax_stack() {
-            return max_stack;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getLevel() {
-            return level;
-        }
-
-        public void setLevel(int level) {
-            this.level = level;
-        }
-
-        public int getItem_number() {
-            return item_number;
-        }
-
-        public void setItem_number(int item_number) {
-            this.item_number = item_number;
         }
     }
 
     private static class Armor extends Item{
-        private static final String type = "Armor";
-        private final String name;
-        private static final boolean stacking_capability = false;
-        private static final int max_stack = 1;
-        private int level;
-        private int item_number = 0;
-
         public Armor(String name, int level){
-            super();
-            this.name = name;
-            this.setLevel(level);
-            setItem_number(getItem_number() + 1);
+            super("Armor", name, false, 1, level);
         }
-
         public static void armorItemPackage(){
             //TODO
-        }
-
-        public static String getType() {
-            return type;
-        }
-
-        public static boolean isStacking_capability() {
-            return stacking_capability;
-        }
-
-        public static int getMax_stack() {
-            return max_stack;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getLevel() {
-            return level;
-        }
-
-        public void setLevel(int level) {
-            this.level = level;
-        }
-
-        public int getItem_number() {
-            return item_number;
-        }
-
-        public void setItem_number(int item_number) {
-            this.item_number = item_number;
         }
     }
 
     private static class Wearable extends Item{
-        private static final String type = "Wearable";
-        private final String name;
-        private static final boolean stacking_capability = false;
-        private static final int max_stack = 1;
-        private final int level;
-        private int item_number = 0;
-
         public Wearable(String name,int level){
-            super();
-            this.name = name;
-            this.level = level;
-            setItem_number(getItem_number() + 1);
+            super("Wearable", name, false, 1, level);
         }
-
         public static void wearableItemPackage(){
             //TODO
         }
-
-        public static String getType() {
-            return type;
-        }
-
-        public static boolean isStacking_capability() {
-            return stacking_capability;
-        }
-
-        public static int getMax_stack() {
-            return max_stack;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public int getLevel() {
-            return level;
-        }
-
-        public int getItem_number() {
-            return item_number;
-        }
-
-        public void setItem_number(int item_number) {
-            this.item_number = item_number;
-        }
-    }
 }
-
+}
