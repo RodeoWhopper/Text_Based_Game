@@ -1,13 +1,16 @@
-package content.characters.npc;
+package content.characters.nonplayerch;
 
 import content.Entity;
 import content.equipments.Equipments;
 import content.inventory.Inventory;
+import content.util.CharacterClass;
+import content.util.Status;
 
 public class Character implements Entity, Entity.ConcreteEntity {
     //Primary
     private String race;
-    private String characterClass;
+    private CharacterClass characterClass;
+    private Status status;
     private String name;
     private int level;
     private int exp;
@@ -33,7 +36,7 @@ public class Character implements Entity, Entity.ConcreteEntity {
     private int stat_charisma;
     private int stat_luck;
     private int stat_insight;
-    public Character(String NAME, int LEVEL, int EXP, String RACE, String CLASS, Inventory INVENTORY){
+    public Character(String NAME, int LEVEL, int EXP, String RACE, CharacterClass CLASS, Inventory INVENTORY){
         this.name = NAME;
         this.level = LEVEL;
         this.exp = EXP;
@@ -122,11 +125,11 @@ public class Character implements Entity, Entity.ConcreteEntity {
         this.base_insight = base_insight;
     }
 
-    public String getCharacterClass() {
+    public CharacterClass getCharacterClass() {
         return characterClass;
     }
 
-    public void setCharacterClass(String character_class) {
+    public void setCharacterClass(CharacterClass character_class) {
         this.characterClass = character_class;
     }
 
