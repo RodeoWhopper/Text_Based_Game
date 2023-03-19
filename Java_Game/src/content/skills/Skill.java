@@ -1,11 +1,15 @@
-package content.talents;
+package content.skills;
 
 import content.Entity;
 
 public class Skill implements Entity, Entity.AbstractEntity {
-    private class PhysicalSkill extends Skill {
+    private class PhysicalSkill extends Skill implements Entity, Entity.AbstractEntity {
 
     }
-    private class 
-    private class SurviveSkill
+    private class MagicalSkill extends Skill implements Entity, Entity.AbstractEntity {
+
+    }
+    private class SurviveSkill extends Skill implements Entity, Entity.AbstractEntity {
+
+    }
 }

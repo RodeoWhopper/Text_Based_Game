@@ -1,6 +1,8 @@
-package content.characters.util;
+package content.util;
 
-public class Space {
+import content.Entity;
+
+public class Space implements Entity {
     private String item;
     private String type;
     private boolean availability;

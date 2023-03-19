@@ -1,4 +1,4 @@
-package content.characters.equipments;
+package content.equipments;
 
 import content.util.Space;
 

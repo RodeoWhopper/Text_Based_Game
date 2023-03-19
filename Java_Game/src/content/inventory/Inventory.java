@@ -1,4 +1,4 @@
-package content.characters.inventory;
+package content.inventory;
 
 import content.items.Item;
 

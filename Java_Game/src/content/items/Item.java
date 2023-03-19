@@ -1,6 +1,9 @@
-package entities.Items;
+package content.items;
 
-public class Item {
+import content.Entity;
+
+public class Item implements Entity {
+    //TODO ITEM LISTELEYEN CLASS YAZILACAK BİR YERE
     private final String type;
     /*
     Usable
@@ -16,14 +19,6 @@ public class Item {
     private final Integer level;
     private final Integer itemNumber;
     private int counter = 1;
-
-    public void itemPackage(){
-        Usable.usableItemPackage();
-        CraftMaterial.craftMaterialItemPackage();
-        Weapon.weaponItemPackage();
-        Armor.armorItemPackage();
-        Wearable.wearableItemPackage();
-    }
     public Item(String type,int typeNumber, String itemName, boolean stackingCapability, Integer maxStack, Integer level){
         this.type = type;
         this.typeNumber = typeNumber;
@@ -52,51 +47,4 @@ public class Item {
     public Integer getItemNumber(){
         return this.itemNumber;
     }
-    private static class Usable extends Item{
-        public Usable(String name, int maxStack){
-            super("Usable",5, name, true, maxStack, null);
-        }
-
-        public static void usableItemPackage(){
-            //TODO
-        }
-    }
-
-    private class CraftMaterial extends Item{
-
-        public CraftMaterial(String name, int maxStack){
-            super("Craft Material",4, name, true, maxStack, null);
-        }
-
-        public static void craftMaterialItemPackage(){
-            //TODO
-        }
-    }
-
-    private static class Weapon extends Item{
-        public Weapon(String name,int level){
-            super("Weapon",3, name, false,1, level);
-        }
-        public static void weaponItemPackage(){
-            //TODO
-        }
-    }
-
-    private static class Armor extends Item{
-        public Armor(String name, int level){
-            super("Armor", 2, name, false, 1, level);
-        }
-        public static void armorItemPackage(){
-            //TODO
-        }
-    }
-
-    private static class Wearable extends Item{
-        public Wearable(String name,int level){
-            super("Wearable", 1, name, false, 1, level);
-        }
-        public static void wearableItemPackage(){
-            //TODO
-        }
-}
 }
