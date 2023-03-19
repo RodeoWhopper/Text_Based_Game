@@ -1,8 +1,7 @@
-package Characters.Inventory;
+package content.characters.inventory;
 
-import Items.Item;
+import content.items.Item;
 
-import java.lang.runtime.SwitchBootstraps;
 import java.util.ArrayList;
 
 public class Inventory {
@@ -82,13 +81,12 @@ public class Inventory {
                 System.out.println("Boş                |  ");
             }
             else{
-                System.out.println(inventory.get(i).item.getItemName().substring(0,15) + "." + "  |  " + inventory.get(i).quantity );
+                System.out.println(inventory.get(i).item.getItemName().substring(0,15) + "." + "  |  " + inventory.get(i).quantity +
+                "  |  " + inventory.get(i).item.getType());
             }
         }
     }
-    public void getItemFromPosition(int x, int y){
-
-    }
+    //These will be shifted to other layers
 
 
     private static class Space{

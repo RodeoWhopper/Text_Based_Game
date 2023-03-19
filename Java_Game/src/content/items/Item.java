@@ -1,4 +1,4 @@
-package Items;
+package entities.Items;
 
 public class Item {
     private final String type;
@@ -9,6 +9,7 @@ public class Item {
     Armor
     Wearable
     */
+    private final int typeNumber;
     private final String itemName;
     private final boolean stackingCapability;
     private final Integer maxStack;
@@ -23,8 +24,9 @@ public class Item {
         Armor.armorItemPackage();
         Wearable.wearableItemPackage();
     }
-    public Item(String type, String itemName, boolean stackingCapability, Integer maxStack, Integer level){
+    public Item(String type,int typeNumber, String itemName, boolean stackingCapability, Integer maxStack, Integer level){
         this.type = type;
+        this.typeNumber = typeNumber;
         this.itemName = itemName;
         this.stackingCapability = stackingCapability;
         this.maxStack = maxStack;
@@ -52,7 +54,7 @@ public class Item {
     }
     private static class Usable extends Item{
         public Usable(String name, int maxStack){
-            super("Usable", name, true, maxStack, null);
+            super("Usable",5, name, true, maxStack, null);
         }
 
         public static void usableItemPackage(){
@@ -63,7 +65,7 @@ public class Item {
     private class CraftMaterial extends Item{
 
         public CraftMaterial(String name, int maxStack){
-            super("Craft Material", name, true, maxStack, null);
+            super("Craft Material",4, name, true, maxStack, null);
         }
 
         public static void craftMaterialItemPackage(){
@@ -73,7 +75,7 @@ public class Item {
 
     private static class Weapon extends Item{
         public Weapon(String name,int level){
-            super("Weapon", name, false,1, level);
+            super("Weapon",3, name, false,1, level);
         }
         public static void weaponItemPackage(){
             //TODO
@@ -82,7 +84,7 @@ public class Item {
 
     private static class Armor extends Item{
         public Armor(String name, int level){
-            super("Armor", name, false, 1, level);
+            super("Armor", 2, name, false, 1, level);
         }
         public static void armorItemPackage(){
             //TODO
@@ -91,7 +93,7 @@ public class Item {
 
     private static class Wearable extends Item{
         public Wearable(String name,int level){
-            super("Wearable", name, false, 1, level);
+            super("Wearable", 1, name, false, 1, level);
         }
         public static void wearableItemPackage(){
             //TODO

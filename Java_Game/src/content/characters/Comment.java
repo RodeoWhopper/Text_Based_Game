@@ -1,4 +1,4 @@
-package Characters;
+package entities.characters;
 
 public class Comment {
     /*
